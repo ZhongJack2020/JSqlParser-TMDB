@@ -364,7 +364,7 @@ TOKEN: /* SQL Keywords. prefixed with K_ to avoid name clashes */
 |   <K_SCHEMA: "SCHEMA">
 |   <K_SELECT: ("SELECT" | "SEL")>
 |   <K_DEPUTYCLASS: ("SELECTDEPUTY"|"UNIONDEPUTY"|"JOINDEPUTY"|"GroupDeputy")>
-//TODO TMDB
+//TODO1 TMDB
 //加入TJoinDeputyClass token
 |   <K_TJOINDEPUTYCLASS: "TJoinDeputyClass">
 //END TODO
@@ -629,7 +629,7 @@ Statement SingleStatement() :
             LOOKAHEAD(CreateDeputyClass())
             stm=CreateDeputyClass()
             |
-            //TODO TMDB
+            //TODO2 TMDB
             //把CreateTJoinDeputyClass加入statement解析里
             LOOKAHEAD(CreateTJoinDeputyClass())
             stm = CreateTJoinDeputyClass()
@@ -5468,7 +5468,7 @@ CreateDeputyClass CreateDeputyClass():
     { return createDeputyClass; }
 }
 
-//TODO TMDB
+//TODO3 TMDB
 //书写创建轨迹join代理类的语法解析，参考创建代理类的语法解析，只需要保留table，select两个属性
 //CreateTJoinDeputyClass CreateTJoinDeputyClass()
 //SQL语句:create TJoinDeputyClass xxx as select xxx intersect select xxx;
@@ -5490,11 +5490,11 @@ CreateTJoinDeputyClass CreateTJoinDeputyClass():
       createTJoinDeputyClass.setDeputyClass(tJoinDeputy); //设置代理类的表格对象
     }
     <K_AS>
-    select=SelectWithWithItems( ) {
+    selectFirst=SelectWithWithItems( ) {
         createTJoinDeputyClass.setSelectFirst(selectFirst);
     }
     <K_INTERSECT>
-    select=SelectWithWithItems( ) {
+    selectEnd=SelectWithWithItems( ) {
         createTJoinDeputyClass.setSelectEnd(selectEnd);
     }
     { return createTJoinDeputyClass; }

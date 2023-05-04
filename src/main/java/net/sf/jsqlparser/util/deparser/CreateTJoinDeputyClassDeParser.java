@@ -15,7 +15,7 @@ import net.sf.jsqlparser.statement.select.Select;
 import net.sf.jsqlparser.statement.select.SelectVisitor;
 import net.sf.jsqlparser.statement.select.WithItem;
 
-//TODO TMDB
+//TODO7 TMDB
 //因为JSqlParser支持deparser，创建了parser方法之后，还要写一个deparser，参考createDeputyClassDeparser
 //SQL语句:create TJoinDeputyClass xxx as select xxx intersect select xxx;
 public class CreateTJoinDeputyClassDeParser extends AbstractDeParser<CreateTJoinDeputyClass> {
@@ -44,7 +44,7 @@ public class CreateTJoinDeputyClassDeParser extends AbstractDeParser<CreateTJoin
 //            buffer.append("OR REPLACE ");
 //        }
 
-        buffer.append(createTJoinDeputyClass.getType()+" ").append(createTJoinDeputyClass.getDeputyClass().getFullyQualifiedName());
+        buffer.append(createTJoinDeputyClass.getType()+" ").append(createTJoinDeputyClass.getTJoinDeputyClass().getFullyQualifiedName());
 
         buffer.append(" AS ");
 

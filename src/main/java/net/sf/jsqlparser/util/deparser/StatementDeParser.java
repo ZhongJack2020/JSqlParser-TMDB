@@ -102,7 +102,7 @@ public class StatementDeParser extends AbstractDeParser<Statement> implements St
         createDeputyClassDeParser.deParse(createDeputyClass);
     }
 
-    //TODO TMDB
+    //TODO8 TMDB
     //在statementDeParser中加入对CreateTJoinDeputyClassDeparesr的访问
     @Override
     public void visit(CreateTJoinDeputyClass createTJoinDeputyClass) {
