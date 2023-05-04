@@ -5487,7 +5487,7 @@ CreateTJoinDeputyClass CreateTJoinDeputyClass():
 //当解析器遇到 K_TJOINDEPUTYCLASS TOKEN时,调用 Table() 方法来解析表名，并将其存储在 tJoinDeputy 变量中。
     tk=<K_TJOINDEPUTYCLASS> tJoinDeputy=Table() {
       createTJoinDeputyClass.setType(tk.image); //设置代理类的”类型“（token的文本内容）
-      createTJoinDeputyClass.setDeputyClass(tJoinDeputy); //设置代理类的表格对象
+      createTJoinDeputyClass.setTJoinDeputyClass(tJoinDeputy); //设置代理类的表格对象
     }
     <K_AS>
     selectFirst=SelectWithWithItems( ) {
