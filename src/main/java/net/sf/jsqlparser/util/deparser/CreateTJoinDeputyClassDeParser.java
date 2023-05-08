@@ -65,24 +65,24 @@ public class CreateTJoinDeputyClassDeParser extends AbstractDeParser<CreateTJoin
         }
         createTJoinDeputyClass.getSelectFirst().getSelectBody().accept(selectVisitor);
 
-        buffer.append(" INTERSECT ");
-
-        Select selectEnd = createTJoinDeputyClass.getSelectEnd();
-        if (selectEnd.getWithItemsList() != null) {
-            buffer.append("WITH ");
-            boolean first = true;
-            for (WithItem item : selectEnd.getWithItemsList()) {
-                if (!first) {
-                    buffer.append(", ");
-                } else {
-                    first = false;
-                }
-
-                item.accept(selectVisitor);
-            }
-            buffer.append(" ");
-        }
-        createTJoinDeputyClass.getSelectEnd().getSelectBody().accept(selectVisitor);
+//        buffer.append(" INTERSECT ");
+//
+//        Select selectEnd = createTJoinDeputyClass.getSelectEnd();
+//        if (selectEnd.getWithItemsList() != null) {
+//            buffer.append("WITH ");
+//            boolean first = true;
+//            for (WithItem item : selectEnd.getWithItemsList()) {
+//                if (!first) {
+//                    buffer.append(", ");
+//                } else {
+//                    first = false;
+//                }
+//
+//                item.accept(selectVisitor);
+//            }
+//            buffer.append(" ");
+//        }
+//        createTJoinDeputyClass.getSelectEnd().getSelectBody().accept(selectVisitor);
 
     }
 

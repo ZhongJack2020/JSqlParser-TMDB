@@ -31,16 +31,16 @@ public class CreateTJoinDeputyClassValidator extends AbstractValidator<CreateTJo
         }
         SelectValidator v = getValidator(SelectValidator.class);
         Select selectFirst = createTJoinDeputyClass.getSelectFirst();
-        Select selectEnd = createTJoinDeputyClass.getSelectEnd();
+//        Select selectEnd = createTJoinDeputyClass.getSelectEnd();
         if (isNotEmpty(selectFirst.getWithItemsList())) {
             selectFirst.getWithItemsList().forEach(wi -> wi.accept(v));
         }
         selectFirst.getSelectBody().accept(v);
 
-        if (isNotEmpty(selectEnd.getWithItemsList())) {
-            selectEnd.getWithItemsList().forEach(wi -> wi.accept(v));
-        }
-        selectEnd.getSelectBody().accept(v);
+//        if (isNotEmpty(selectEnd.getWithItemsList())) {
+//            selectEnd.getWithItemsList().forEach(wi -> wi.accept(v));
+//        }
+//        selectEnd.getSelectBody().accept(v);
 
     }
 

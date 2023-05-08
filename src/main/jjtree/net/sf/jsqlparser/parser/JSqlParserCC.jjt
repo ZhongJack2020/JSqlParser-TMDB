@@ -5477,7 +5477,7 @@ CreateTJoinDeputyClass CreateTJoinDeputyClass():
     CreateTJoinDeputyClass createTJoinDeputyClass = new CreateTJoinDeputyClass();
     Table tJoinDeputy = null; //表格对象
     Select selectFirst = null;  //第一个选择对象
-    Select selectEnd = null;  //第二个选择对象
+//    Select selectEnd = null;  //第二个选择对象
     List<String> columnNames = null;
     Token tk;
 }
@@ -5493,10 +5493,10 @@ CreateTJoinDeputyClass CreateTJoinDeputyClass():
     selectFirst=SelectWithWithItems( ) {
         createTJoinDeputyClass.setSelectFirst(selectFirst);
     }
-    <K_INTERSECT>
-    selectEnd=SelectWithWithItems( ) {
-        createTJoinDeputyClass.setSelectEnd(selectEnd);
-    }
+//    <K_INTERSECT>
+//    selectEnd=SelectWithWithItems( ) {
+//        createTJoinDeputyClass.setSelectEnd(selectEnd);
+//    }
     { return createTJoinDeputyClass; }
 }
 

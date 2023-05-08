@@ -115,7 +115,12 @@ public class StatementVisitorAdapter implements StatementVisitor {
     //override visit方法
     @Override
     public void visit(CreateTJoinDeputyClass createTJoinDeputyClass){
-
+        //一下是可选的操作，可忽略
+        // System.out.println("Visiting CreateTJoinDeputyClass:");
+        // System.out.println("Type: " + createTJoinDeputyClass.getType());
+        // System.out.println("TJoinDeputyClass: " + createTJoinDeputyClass.getTJoinDeputyClass());
+        // System.out.println("SelectFirst: " + createTJoinDeputyClass.getSelectFirst());
+        // System.out.println("SelectEnd: " + createTJoinDeputyClass.getSelectEnd());
     }
 
     @Override

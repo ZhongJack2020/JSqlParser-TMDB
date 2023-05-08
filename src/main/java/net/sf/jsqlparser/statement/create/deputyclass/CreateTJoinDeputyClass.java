@@ -27,7 +27,7 @@ public class CreateTJoinDeputyClass implements Statement {
 
     private Table tJoinDeputyClass = null; //表格对象
     private Select selectFirst = null;  //第一个选择对象
-    private Select selectEnd = null;  //第二个选择对象
+//    private Select selectEnd = null;  //第二个选择对象
     private String type;
 
 
@@ -67,17 +67,17 @@ public class CreateTJoinDeputyClass implements Statement {
         return selectFirst;
     }
 
-    public Select getSelectEnd() {
-        return selectEnd;
-    }
+//    public Select getSelectEnd() {
+//        return selectEnd;
+//    }
 
     public void setSelectFirst(Select selectFirst) {
         this.selectFirst = selectFirst;
     }
 
-    public void setSelectEnd(Select selectEnd) {
-        this.selectEnd = selectEnd;
-    }
+//    public void setSelectEnd(Select selectEnd) {
+//        this.selectEnd = selectEnd;
+//    }
 
     @Override
     public String toString() {
@@ -89,7 +89,7 @@ public class CreateTJoinDeputyClass implements Statement {
         sql.append(type+" ");
         sql.append(tJoinDeputyClass);
         sql.append(" AS ").append(selectFirst);
-        sql.append(" INTERSECT ").append(selectEnd);
+//        sql.append(" INTERSECT ").append(selectEnd);
         return sql.toString();
     }
 
